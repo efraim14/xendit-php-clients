@@ -24,6 +24,12 @@
             if (!empty($invoice_options['callback_virtual_account_id'])) {
                 $data['callback_virtual_account_id'] = $invoice_options['callback_virtual_account_id'];
             }
+            if (!empty($invoice_options['payment_methods'])) {
+                $data['payment_methods'] = $invoice_options['payment_methods'];
+            }
+            if (!empty($invoice_options['success_redirect_url'])) {
+                $data['success_redirect_url'] = $invoice_options['success_redirect_url'];
+            }
 
             $payload = json_encode($data);
 
